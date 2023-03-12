@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2018",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@common/*": ["src/common/*"],
+      "@core/*": ["src/common/core/*"],
+      "@decorator/*": ["src/common/decorators/*"],
+      "@guard/*": ["src/common/guards/*"],
+      "@helper/*": ["src/common/helpers/*"],
+      "@interface/*": ["src/common/interfaces/*"],
+      "@strategy/*": ["src/common/strategis/*"],
+      "@util/*": ["src/common/utils/*"],
+      "@config/*": ["src/configs/*"],
+      "@controller/*": ["src/controllers/*"],
+      "@dto/*": ["src/dtos/*"],
+      "@entity/*": ["src/entities/*"],
+      "@module/*": ["src/modules/*"],
+      "@provider/*": ["src/providers/*"],
+      "@repository/*": ["src/repositories/*"],
+      "@service/*": ["src/services/*"]
+    },
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false
+  }
+}
