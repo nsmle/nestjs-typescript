@@ -10,23 +10,23 @@ import databaseConfig from "@config/database.config";
 import jwtConfig from "@config/jwt.config";
 
 const CoreModule: DynamicModule[] = [
-  ConfigModule.forRoot({
-    envFilePath: [
-      ".env",
-      ".env.local",
-      ".env.development",
-      ".env.staging",
-      ".env.production",
-    ],
-    load: [appConfig, corsConfig, databaseConfig, jwtConfig],
-    cache: true,
-    isGlobal: true,
-  }),
+	ConfigModule.forRoot({
+		envFilePath: [
+			".env",
+			".env.local",
+			".env.development",
+			".env.staging",
+			".env.production",
+		],
+		load: [appConfig, corsConfig, databaseConfig, jwtConfig],
+		cache: true,
+		isGlobal: true,
+	}),
 ];
 
 @Module({
-  imports: [...CoreModule /**, DatabaseModule */],
-  controllers: [HomeController],
-  providers: [HomeService],
+	imports: [...CoreModule /**, DatabaseModule */],
+	controllers: [HomeController],
+	providers: [HomeService],
 })
 export class MainModule {}
